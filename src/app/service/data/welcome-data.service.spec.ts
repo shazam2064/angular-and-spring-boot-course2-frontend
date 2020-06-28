@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { WelcomeDataService } from './welcome-data.service';
+import {WelcomeDataService} from './welcome-data.service';
 
 describe('WelcomeDataService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

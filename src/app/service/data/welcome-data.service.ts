@@ -1,8 +1,9 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Injectable} from '@angular/core';
 
 export class HelloWorldBean {
-  constructor(public message:string){ }
+  constructor(public message: string) {
+  }
 }
 
 @Injectable({
@@ -11,8 +12,9 @@ export class HelloWorldBean {
 export class WelcomeDataService {
 
   constructor(
-    private http:HttpClient
-  ) { }
+    private http: HttpClient
+  ) {
+  }
 
   executeHelloWorldBeanService() {
     return this.http.get<HelloWorldBean>('http://localhost:8080/hello-world-bean');
@@ -22,7 +24,7 @@ export class WelcomeDataService {
 
     return this.http.get<HelloWorldBean>(
       `http://localhost:8080/hello-world/path-variable/${name}`,
-      );
+    );
 
   }
 

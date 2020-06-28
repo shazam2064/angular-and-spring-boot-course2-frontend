@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { HttpIntercepterBasicAuthService } from './http-intercepter-basic-auth.service';
+import {HttpIntercepterBasicAuthService} from './http-intercepter-basic-auth.service';
 
 describe('HttpIntercepterBasicAuthService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

@@ -14,7 +14,7 @@ export class BasicAuthenticationService {
   constructor(private http: HttpClient) { }
 
   executeJWTAuthenticationService(username, password) {
-    
+
     return this.http.post<any>(
       `${API_URL}/authenticate`,{
         username,
@@ -28,12 +28,11 @@ export class BasicAuthenticationService {
           }
         )
       );
-    //console.log("Execute Hello World Bean Service")
   }
 
 
   executeAuthenticationService(username, password) {
-    
+
     let basicAuthHeaderString = 'Basic ' + window.btoa(username + ':' + password);
 
     let headers = new HttpHeaders({
@@ -51,7 +50,6 @@ export class BasicAuthenticationService {
           }
         )
       );
-    //console.log("Execute Hello World Bean Service")
   }
 
   getAuthenticatedUser() {

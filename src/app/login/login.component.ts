@@ -15,9 +15,7 @@ export class LoginComponent implements OnInit {
   errorMessage = 'Invalid Credentials'
   invalidLogin = false
 
-  //Router
-  //Angular.giveMeRouter
-  //Dependency Injection
+
   constructor(private router: Router,
     private hardcodedAuthenticationService: HardcodedAuthenticationService,
     private basicAuthenticationService: BasicAuthenticationService) { }
@@ -26,10 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   handleLogin() {
-    // console.log(this.username);
-    //if(this.username==="in28minutes" && this.password === 'dummy') {
     if(this.hardcodedAuthenticationService.authenticate(this.username, this.password)) {
-      //Redirect to Welcome Page
       this.router.navigate(['welcome', this.username])
       this.invalidLogin = false
     } else {
@@ -38,14 +33,12 @@ export class LoginComponent implements OnInit {
   }
 
   handleBasicAuthLogin() {
-    // console.log(this.username);
-    //if(this.username==="in28minutes" && this.password === 'dummy') {
     this.basicAuthenticationService.executeAuthenticationService(this.username, this.password)
         .subscribe(
           data => {
             console.log(data)
             this.router.navigate(['welcome', this.username])
-            this.invalidLogin = false      
+            this.invalidLogin = false
           },
           error => {
             console.log(error)
@@ -60,7 +53,7 @@ export class LoginComponent implements OnInit {
           data => {
             console.log(data)
             this.router.navigate(['welcome', this.username])
-            this.invalidLogin = false      
+            this.invalidLogin = false
           },
           error => {
             console.log(error)

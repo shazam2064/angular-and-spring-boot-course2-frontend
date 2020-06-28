@@ -14,8 +14,7 @@ export class TodoDataService {
 
   retrieveAllTodos(username) {
     return this.http.get<Todo[]>(`${TODO_JPA_API_URL}/users/${username}/todos`);
-    //console.log("Execute Hello World Bean Service")
-  }
+}
 
   deleteTodo(username, id){
     return this.http.delete(`${TODO_JPA_API_URL}/users/${username}/todos/${id}`);

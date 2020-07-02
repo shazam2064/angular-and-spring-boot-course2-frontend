@@ -6,19 +6,19 @@
 
 <div class="container">
   <div
-    class="alert alert-warning"
+    class="alert alert-danger"
     *ngIf="todoForm.dirty && todoForm.invalid"
   >
     Enter valid values
   </div>
   <div
-    class="alert alert-warning"
+    class="alert alert-danger"
     *ngIf="todoForm.dirty && targetDate.invalid"
   >
     Enter valid Target Date
   </div>
   <div
-    class="alert alert-warning"
+    class="alert alert-danger"
     *ngIf="todoForm.dirty && description.invalid"
   >
     Enter at least 5 characters in Description
@@ -51,7 +51,6 @@
         required="required"
       >
     </fieldset>
-
     <button type="submit" class="btn btn-success">Save</button>
   </form>
 </div>

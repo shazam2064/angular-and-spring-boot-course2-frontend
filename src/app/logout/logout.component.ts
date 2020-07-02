@@ -1,4 +1,4 @@
-import {HardcodedAuthenticationService} from './../service/hardcoded-authentication.service';
+import {HardcodedAuthenticationService} from '../service/hardcoded-authentication.service';
 import {Component, OnInit} from '@angular/core';
 
 @Component({

@@ -1,4 +1,4 @@
-import {TodoDataService} from './../service/data/todo-data.service';
+import {TodoDataService} from '../service/data/todo-data.service';
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
@@ -23,20 +23,6 @@ export class ListTodosComponent implements OnInit {
   todos: Todo[];
 
   message: string;
-
-  // = [
-  //   new Todo(1, 'Learn to Dance', false, new Date()),
-  //   new Todo(2, 'Become an Expert at Angular', false, new Date()),
-  //   new Todo(3, 'Visit Europe', false, new Date())
-  //   // {id : 1, description : },
-  //   // {id : 2, description : ''},
-  //   // {id : 3, description : 'Visit India'}
-  // ]
-
-  // todo = {
-  //     id : 1,
-  //     description: 'Learn to Dance'
-  // }
 
   constructor(
     private todoService: TodoDataService,

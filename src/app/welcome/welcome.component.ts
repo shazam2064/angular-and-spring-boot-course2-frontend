@@ -1,4 +1,4 @@
-import {WelcomeDataService} from './../service/data/welcome-data.service';
+import {WelcomeDataService} from '../service/data/welcome-data.service';
 import {ActivatedRoute} from '@angular/router';
 
 import {Component, OnInit} from '@angular/core';
